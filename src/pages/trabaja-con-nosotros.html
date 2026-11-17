@@ -1,0 +1,95 @@
+<!--meta {"title":"Trabaja con nosotros | Terapeutas y voluntarios en Valparaíso","description":"Postula como terapeuta ocupacional, fonoaudiólogo, psicólogo u otra especialidad, o como voluntario en la Fundación Niños del Rey, Valparaíso."} -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Trabaja con nosotros</p>
+    <h1>Súmate a un equipo que cambia realidades</h1>
+    <p class="lead">Buscamos profesionales y voluntarios que quieran poner su vocación al servicio de niñas, niños y familias de Valparaíso.</p>
+  </div>
+</section>
+
+<section class="section-tight" aria-labelledby="perfiles">
+  <div class="container">
+    <h2 id="perfiles" class="visually-hidden">Perfiles</h2>
+    <div class="grid grid-2">
+      <div class="card card-tint bg-verde reveal">
+        <span class="icon-badge bg-paper">{{icon:briefcase}}</span>
+        <h3>Terapeutas</h3>
+        <p><strong>Convocatoria abierta: terapeutas ocupacionales.</strong> También recibimos antecedentes de otras especialidades.</p>
+        <ul class="checks">
+          <li>{{icon:check}}<span>Título profesional <span class="todo">[y requisitos: registro en Superintendencia de Salud, experiencia, etc.]</span></span></li>
+          <li>{{icon:check}}<span>Modalidad: <span class="todo">[jornada, honorarios, horario]</span></span></li>
+        </ul>
+      </div>
+      <div class="card card-tint bg-amarillo reveal">
+        <span class="icon-badge bg-paper">{{icon:hand}}</span>
+        <h3>Voluntariado</h3>
+        <p>Hay muchas formas de ayudar: eventos, rifas, ferias, difusión, apoyo administrativo y más.</p>
+        <ul class="checks">
+          <li>{{icon:check}}<span>Mayores de 18 años</span></li>
+          <li>{{icon:check}}<span>Disponibilidad: <span class="todo">[horas o días mínimos]</span></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="notice mt-5">{{icon:shield}}<p>Por la protección de la infancia, a todas las personas que trabajen con niños les pediremos su <strong>certificado de inhabilidades para trabajar con menores de edad</strong>. Lee nuestro <a href="compromiso-infancia.html">compromiso con la infancia</a>.</p></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="form-postula">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Postulación</p>
+      <h2 id="form-postula">Cuéntanos de ti</h2>
+      <p class="lead">Completa el formulario. Luego te pediremos tu currículum por correo a <a href="mailto:{{email}}">{{email}}</a>.</p>
+    </div>
+    <form class="form" data-form="postulacion" data-title="Postulación (formulario web)" action="#" method="post">
+      <fieldset class="field">
+        <legend>Quiero postular como</legend>
+        <div class="choices">
+          <div class="choice"><input type="radio" id="po-t" name="tipo" value="Terapeuta" checked><label for="po-t">Terapeuta</label></div>
+          <div class="choice"><input type="radio" id="po-v" name="tipo" value="Voluntario/a"><label for="po-v">Voluntario/a</label></div>
+        </div>
+      </fieldset>
+      <div class="field">
+        <label for="po-nombre">Nombre y apellido (obligatorio)</label>
+        <input id="po-nombre" name="nombre" type="text" autocomplete="name" required>
+      </div>
+      <div class="form-row">
+        <div class="field">
+          <label for="po-tel">Teléfono o WhatsApp (obligatorio)</label>
+          <input id="po-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required>
+        </div>
+        <div class="field">
+          <label for="po-mail">Correo electrónico (obligatorio)</label>
+          <input id="po-mail" name="correo" type="email" autocomplete="email" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="po-esp">Profesión o especialidad</label>
+        <select id="po-esp" name="especialidad">
+          <option value="">Selecciona una opción</option>
+          <option>Terapia ocupacional</option>
+          <option>Fonoaudiología</option>
+          <option>Psicología</option>
+          <option>Trabajo social</option>
+          <option>Nutrición</option>
+          <option>Educación diferencial</option>
+          <option>Otra / voluntariado</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="po-disp">Disponibilidad</label>
+        <input id="po-disp" name="disponibilidad" type="text" placeholder="Ej.: martes y jueves en la tarde">
+      </div>
+      <div class="field">
+        <label for="po-msg">¿Por qué quieres sumarte?</label>
+        <textarea id="po-msg" name="motivacion" rows="4"></textarea>
+      </div>
+      <div class="check-line">
+        <input id="po-ok" name="consentimiento" type="checkbox" required>
+        <label for="po-ok">Acepto que la fundación use estos datos para revisar mi postulación.</label>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Enviar postulación</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
