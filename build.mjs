@@ -11,11 +11,13 @@ const SITE_URL = 'https://DOMINIO-POR-DEFINIR.cl';
 
 const ORG = {
   name: 'Fundación Niños del Rey',
-  wa: '56986258318',
-  waDisplay: '+56 9 8625 8318',
+  wa: '56934921127',
+  waDisplay: '+56 9 3492 1127',
   email: 'fundacionninosdelrey.valpo@gmail.com',
   ig: 'fundacionninosdelrey.oficial',
-  place: 'Cerro Esperanza, Valparaíso',
+  place: 'Quillota 654, Viña del Mar',
+  rut: '9.904.279-2',
+  mapsUrl: 'https://maps.app.goo.gl/7M6qctsq4EsAs6bW8',
 };
 
 const waLink = (msg) => `https://wa.me/${ORG.wa}?text=${encodeURIComponent(msg)}`;
@@ -135,12 +137,12 @@ function footer() {
         <li><a href="${WA_GENERAL}" target="_blank" rel="noopener">${icon('whatsapp')}${ORG.waDisplay}</a></li>
         <li><a href="mailto:${ORG.email}">${icon('mail')}<span class="break">${ORG.email}</span></a></li>
         <li><a href="https://www.instagram.com/${ORG.ig}/" target="_blank" rel="noopener">${icon('instagram')}@${ORG.ig}</a></li>
-        <li><span>${icon('pin')}${ORG.place}</span></li>
+        <li><a href="${ORG.mapsUrl}" target="_blank" rel="noopener">${icon('pin')}${ORG.place}</a></li>
       </ul>
     </div>
   </div>
   <div class="container footer-bottom">
-    <p>© <span data-year>2026</span> Fundación Niños del Rey. [RUT de la fundación]</p>
+    <p>© <span data-year>2026</span> Fundación Niños del Rey · RUT ${ORG.rut}</p>
   </div>
 </footer>
 <a class="wa-float" href="${WA_GENERAL}" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">${icon('whatsapp')}<span class="wa-float-label">WhatsApp</span></a>`;
@@ -156,8 +158,12 @@ function jsonLd() {
     email: ORG.email,
     telephone: '+' + ORG.wa,
     sameAs: [`https://www.instagram.com/${ORG.ig}/`],
-    address: { '@type': 'PostalAddress', addressLocality: 'Valparaíso', addressRegion: 'Valparaíso', addressCountry: 'CL', streetAddress: 'Cerro Esperanza' },
-    areaServed: 'Valparaíso',
+    taxID: ORG.rut,
+    foundingDate: '2021',
+    founder: { '@type': 'Person', name: 'Andrea Cancino' },
+    address: { '@type': 'PostalAddress', streetAddress: 'Quillota 654', addressLocality: 'Viña del Mar', addressRegion: 'Valparaíso', addressCountry: 'CL' },
+    hasMap: ORG.mapsUrl,
+    areaServed: ['Viña del Mar', 'Valparaíso'],
     knowsAbout: ['Terapia ocupacional', 'Fonoaudiología', 'Psicología infantil', 'Trabajo social', 'Nutrición', 'Educación diferencial', 'Autismo', 'TDAH', 'Neurodivergencia'],
   });
 }
@@ -217,7 +223,9 @@ function expand(html) {
     .replace(/\{\{wa:(\w[^}]*)\}\}/g, (_, msg) => waLink(msg))
     .replace(/\{\{email\}\}/g, ORG.email)
     .replace(/\{\{ig\}\}/g, ORG.ig)
-    .replace(/\{\{waDisplay\}\}/g, ORG.waDisplay);
+    .replace(/\{\{waDisplay\}\}/g, ORG.waDisplay)
+    .replace(/\{\{maps\}\}/g, ORG.mapsUrl)
+    .replace(/\{\{rut\}\}/g, ORG.rut);
 }
 
 const OUT = 'dist';

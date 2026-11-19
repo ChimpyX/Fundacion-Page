@@ -257,7 +257,7 @@
           });
         return;
       }
-      var url = 'https://wa.me/' + (form.getAttribute('data-wa') || CFG.whatsapp || '56986258318') + '?text=' + encodeURIComponent(text);
+      var url = 'https://wa.me/' + (form.getAttribute('data-wa') || CFG.whatsapp || '56934921127') + '?text=' + encodeURIComponent(text);
       out.innerHTML = 'Abrimos WhatsApp con tu mensaje listo. Solo toca <strong>Enviar</strong>. Si no se abrió, <a href="' + url + '" target="_blank" rel="noopener">toca aquí</a>.';
       window.open(url, '_blank', 'noopener');
     });

@@ -10,9 +10,10 @@ Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 - [ ] Fotos del equipo (opcional) o confirmar que se usan íconos
 
 ## Generales
-- [ ] RUT y N.º/fecha de personalidad jurídica
-- [ ] Dirección exacta en Cerro Esperanza (para el mapa)
-- [ ] Días y horario de atención, y horario de respuesta de WhatsApp
+- [x] RUT (9.904.279-2)
+- [ ] N.º y fecha de personalidad jurídica
+- [x] Dirección: Quillota 654, Viña del Mar
+- [x] Horario: semanal, acordado con cada profesional
 - [ ] Dominio web (ej.: fundacionninosdelrey.cl)
 
 ## Inicio
@@ -20,20 +21,21 @@ Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 - [ ] Forma de pago del apadrinamiento y cómo dejar de aportar
 
 ## Quiénes somos
-- [ ] Historia (año de inicio, fundadores, motivación, hitos)
-- [ ] Misión y visión oficiales (la misión actual es un borrador)
-- [ ] Cifras: niños atendidos, sesiones al año, profesionales/voluntarios, años de trabajo
-- [ ] Equipo: nombre y cargo/profesión de cada persona
+- [x] Historia (año de inicio, fundadores, motivación, hitos)
+- [x] Misión y visión oficiales (la misión actual es un borrador)
+- [x] Cifras: niños atendidos, sesiones al año, profesionales/voluntarios, años de trabajo
+- [x] Equipo: Andrea Cancino, Diego Orrico Figueroa, Shirli Rascovsky Aqueveque (con foto)
+- [ ] Equipo: nombre, profesión y foto de los 4 profesionales restantes
 
 ## Terapias
-- [ ] Confirmar los focos de cada especialidad (cada profesional revisa su tarjeta)
-- [ ] Diagnósticos: cuáles se hacen, quiénes participan, duración y documento entregado
-- [ ] Valores: sesión individual, evaluación diagnóstica, condición para apadrinados
-- [ ] Rango de edad atendido y convenios (Fonasa/Isapre/otros)
+- [x] Focos de cada especialidad confirmados
+- [x] Diagnósticos: todo tipo, según evaluación
+- [x] Valores: $10.000 cualquier atención
+- [x] Edades 4 a 16 años; sin convenios
 
 ## Apadrina
-- [ ] Qué cubren $5.000 al mes
-- [ ] Medio de pago (transferencia, suscripción) y qué recibe el padrino
+- [x] $5.000 cubren la mitad de una sesión
+- [x] Transferencia mensual; informe mensual de avances y saludo
 - [ ] Cuando exista: link de pago Flow / Mercado Pago / Webpay
 
 ## Noticias
@@ -41,12 +43,12 @@ Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 - [ ] Rifa: fecha, hora y medio del sorteo
 - [x] Primera jornada de cuidadores (25 de octubre de 2025)
 - [ ] Próxima jornada de cuidadores: fecha, lugar, horario
-- [ ] Fechas de cierre por feriados
+- [ ] Avisos de feriado cuando corresponda
 
 ## Trabaja con nosotros
 - [x] Convocatoria de terapeutas ocupacionales y WhatsApp para currículum (+56 9 3492 1127)
-- [ ] Modalidad para terapeutas (jornada, honorarios, horario)
-- [ ] Disponibilidad mínima para voluntarios
+- [x] Modalidad presencial, horario según disponibilidad
+- [x] Voluntariado para talleres, a acordar
 
 ## Compromiso con la infancia
 - [x] Comunicado oficial de protección de la infancia (tomado de Instagram)

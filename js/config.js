@@ -6,7 +6,7 @@
  * Mientras estén vacíos, los formularios y botones de donación abren WhatsApp.
  */
 window.FNR_CONFIG = {
-  whatsapp: '56986258318',
+  whatsapp: '56934921127',
   email: 'fundacionninosdelrey.valpo@gmail.com',
 
   // Deslizamiento suave con rueda del mouse o trackpad (solo computador).
