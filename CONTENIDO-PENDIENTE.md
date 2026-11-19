@@ -14,7 +14,8 @@ Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 - [ ] N.º y fecha de personalidad jurídica
 - [x] Dirección: Quillota 654, Viña del Mar
 - [x] Horario: semanal, acordado con cada profesional
-- [ ] Dominio web (ej.: fundacionninosdelrey.cl)
+- [x] Publicado en https://fundacion-ninos-del-rey.pages.dev
+- [ ] Dominio propio (opcional, ej.: fundacionninosdelrey.cl)
 
 ## Inicio
 - [ ] Frase sobre cómo la fundación entiende la neurodivergencia

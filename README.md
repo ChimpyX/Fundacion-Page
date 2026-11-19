@@ -19,7 +19,7 @@ dist/              Sitio listo para publicar (se genera con `node build.mjs`)
 3. Publica la carpeta `dist/`:
    - **Netlify / Cloudflare Pages:** comando `node build.mjs`, carpeta `dist` (ya configurado en `netlify.toml`).
    - **GitHub Pages:** Settings → Pages → Source: *GitHub Actions* (usa `.github/workflows/pages.yml`).
-4. Antes de publicar, cambia `SITE_URL` en `build.mjs` por el dominio real (sitemap, canonical y Open Graph).
+4. El sitio está publicado en https://fundacion-ninos-del-rey.pages.dev (Cloudflare Pages, se actualiza solo con cada push). Si se compra un dominio propio, cambiar `SITE_URL` en `build.mjs`.
 
 ## Formularios
 Por defecto, cada formulario arma un mensaje y abre WhatsApp listo para enviar. Para recibirlos por correo, crea un formulario en Formspree (u otro servicio) y pega su URL en `formEndpoint` de `js/config.js`.

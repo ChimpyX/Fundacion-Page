@@ -6,8 +6,8 @@
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, cpSync, rmSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-// ⚠️ Reemplazar por el dominio definitivo antes de publicar (sitemap, canonical, Open Graph).
-const SITE_URL = 'https://DOMINIO-POR-DEFINIR.cl';
+// Dirección pública del sitio (sitemap, canonical, Open Graph). Cambiar si se compra un dominio propio.
+const SITE_URL = 'https://fundacion-ninos-del-rey.pages.dev';
 
 const ORG = {
   name: 'Fundación Niños del Rey',
