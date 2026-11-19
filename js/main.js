@@ -253,11 +253,11 @@
             out.textContent = '¡Gracias! Recibimos tu mensaje y te responderemos pronto.';
           })
           .catch(function () {
-            out.innerHTML = 'No pudimos enviar el formulario. Escríbenos por <a href="https://wa.me/' + CFG.whatsapp + '?text=' + encodeURIComponent(text) + '" target="_blank" rel="noopener">WhatsApp</a>.';
+            out.innerHTML = 'No pudimos enviar el formulario. Escríbenos por <a href="https://wa.me/' + (form.getAttribute('data-wa') || CFG.whatsapp) + '?text=' + encodeURIComponent(text) + '" target="_blank" rel="noopener">WhatsApp</a>.';
           });
         return;
       }
-      var url = 'https://wa.me/' + (CFG.whatsapp || '56986258318') + '?text=' + encodeURIComponent(text);
+      var url = 'https://wa.me/' + (form.getAttribute('data-wa') || CFG.whatsapp || '56986258318') + '?text=' + encodeURIComponent(text);
       out.innerHTML = 'Abrimos WhatsApp con tu mensaje listo. Solo toca <strong>Enviar</strong>. Si no se abrió, <a href="' + url + '" target="_blank" rel="noopener">toca aquí</a>.';
       window.open(url, '_blank', 'noopener');
     });

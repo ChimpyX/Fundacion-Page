@@ -3,9 +3,9 @@
 Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 
 ## Imágenes
-- [ ] **Logo** en PNG con fondo transparente, mínimo 512×512 px → `assets/logo.png`
-- [ ] **Imagen para compartir en redes** (1200×630 px, logo + frase) → `assets/og-image.png`
-- [ ] **Fotos de actividades** (3 o más por categoría: Terapias, Ferias, Reuniones, Salidas), cada una con fecha y una frase. Sin rostros de niños; solo de espalda o manos, y con autorización escrita de los apoderados.
+- [x] **Logo**: tomado de la foto de perfil de Instagram. Conviene enviar el **archivo original** (PNG o PDF de quien lo diseñó) para máxima nitidez.
+- [x] Imagen para compartir en redes (generada con el logo)
+- [ ] **Fotos de actividades** (3 o más por categoría: Terapias, Ferias, Reuniones, Salidas). Las de Instagram muestran caras de niños, así que no se usaron: enviar versiones de espalda, de manos o con autorización escrita de los apoderados. Ya están rotuladas: material sensorial, túnel sensorial, Día de la Niñez, jornada de cuidadores, Navidad, Club de Campo Pelumpen, vacaciones de invierno.
 - [ ] Foto de la sede o del equipo (adultos) para "Quiénes somos"
 - [ ] Fotos del equipo (opcional) o confirmar que se usan íconos
 
@@ -37,16 +37,20 @@ Todo lo que aparece entre `[corchetes]` en el sitio. Agrupado por página.
 - [ ] Cuando exista: link de pago Flow / Mercado Pago / Webpay
 
 ## Noticias
-- [ ] Rifa: premios, fecha, hora y medio del sorteo
-- [ ] Jornada de cuidadores: fecha, lugar, horario, inscripción
+- [x] Rifa: valor y 7 premios (tomados de Instagram)
+- [ ] Rifa: fecha, hora y medio del sorteo
+- [x] Primera jornada de cuidadores (25 de octubre de 2025)
+- [ ] Próxima jornada de cuidadores: fecha, lugar, horario
 - [ ] Fechas de cierre por feriados
 
 ## Trabaja con nosotros
-- [ ] Requisitos y modalidad para terapeutas (jornada, honorarios)
+- [x] Convocatoria de terapeutas ocupacionales y WhatsApp para currículum (+56 9 3492 1127)
+- [ ] Modalidad para terapeutas (jornada, honorarios, horario)
 - [ ] Disponibilidad mínima para voluntarios
 
 ## Compromiso con la infancia
-- [ ] Texto oficial de la declaración (los compromisos actuales son un borrador)
+- [x] Comunicado oficial de protección de la infancia (tomado de Instagram)
+- [ ] Revisar la lista "Cómo lo aplicamos en la fundación" (borrador)
 - [ ] Persona responsable de recibir reportes
 - [ ] Protocolo de buen trato y formulario de autorización de imagen (PDF)
 

@@ -9,7 +9,7 @@ build.mjs          Une cabecera, menú y pie con cada página → dist/
 css/styles.css     Sistema de diseño (colores, tipografías, componentes)
 js/config.js       WhatsApp, recepción de formularios y enlaces de pago
 js/main.js         Menú, galería, formularios, animaciones
-assets/            logo.png (por agregar), favicon.svg, og-image.png (por agregar)
+assets/            logo.png, logo-mark.webp, íconos y og-image.jpg
 dist/              Sitio listo para publicar (se genera con `node build.mjs`)
 ```
 

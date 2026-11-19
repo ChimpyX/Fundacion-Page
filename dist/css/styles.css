@@ -151,7 +151,8 @@ main:focus { outline: none; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: var(--s-4); min-height: 4.5rem; }
 .brand { display: flex; align-items: center; gap: .65rem; text-decoration: none; color: var(--ink); min-height: 44px; }
 .brand:hover { color: var(--ink); }
-.brand-logo { width: 48px; height: 48px; object-fit: contain; }
+.brand-logo { width: 70px; height: auto; }
+.footer-logo { width: 96px; height: 96px; margin-bottom: var(--s-4); border-radius: 50%; }
 .brand-text { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; line-height: 1.05; }
 .brand-small { display: block; font-size: .8rem; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
 
@@ -265,19 +266,12 @@ main:focus { outline: none; }
 
 .hero-art { display: none; position: relative; max-width: 30rem; margin-inline: auto; width: 100%; }
 @media (min-width: 56em) { .hero-art { display: flex; flex-direction: column; align-items: center; } }
-.hero-art .arc { width: 100%; height: auto; }
-.hero-art .arc path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 1.4s var(--ease) forwards; }
-.hero-art .arc path:nth-child(2) { animation-delay: .1s; }
-.hero-art .arc path:nth-child(3) { animation-delay: .2s; }
-.hero-art .arc path:nth-child(4) { animation-delay: .3s; }
-.hero-art .arc path:nth-child(5) { animation-delay: .4s; }
-@keyframes draw { to { stroke-dashoffset: 0; } }
+.hero-logo { width: 100%; height: auto; }
 .hero-card {
-  position: relative; margin-top: -1.25rem;
-  width: min(86%, 22rem); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  position: relative; margin-top: var(--s-4);
+  width: 100%; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
   padding: var(--s-4) var(--s-5); box-shadow: var(--shadow); text-align: center;
 }
-.hero-card img { width: 72px; height: 72px; object-fit: contain; margin: -3.25rem auto var(--s-2); background: var(--paper); border-radius: 50%; padding: 6px; border: 1px solid var(--line); }
 .hero-card p { margin: 0; font-weight: 600; font-size: 1rem; }
 
 /* ---------- Tarjetas ---------- */
@@ -600,7 +594,6 @@ html.lenis { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .m-enter [data-enter] h1 .w > span, .m-enter [data-enter] .enter-up, .m-enter [data-enter] .hero-art { opacity: 1 !important; transform: none !important; }
   .js-moment .moment-text .mw { color: inherit; }
-  .hero-art .arc path { stroke-dashoffset: 0; }
 }
 
 /* Utilidades */
@@ -610,3 +603,5 @@ html.lenis { scroll-behavior: auto; }
 .bg-ink .price-card .eyebrow, .bg-ink .card .eyebrow { color: var(--ink-soft); }
 .wa-float { transition: transform .2s var(--ease), background-color .2s, opacity .2s; }
 .wa-float.is-hidden { opacity: 0; transform: translateY(12px); pointer-events: none; visibility: hidden; transition: opacity .2s, transform .2s, visibility 0s .2s; }
+.prize-list { padding-left: 1.4rem; margin-bottom: var(--s-4); columns: 2 14rem; column-gap: var(--s-5); }
+.prize-list li { margin-bottom: .3rem; break-inside: avoid; }

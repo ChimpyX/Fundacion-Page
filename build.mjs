@@ -91,7 +91,7 @@ function header(active) {
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="./" aria-label="Fundación Niños del Rey, ir al inicio">
-      <img src="assets/logo.png" alt="" width="48" height="48" class="brand-logo" onerror="this.style.visibility='hidden'">
+      <img src="assets/logo-mark.webp" alt="" width="70" height="35" class="brand-logo">
       <span class="brand-text"><span class="brand-small">Fundación</span> Niños del Rey</span>
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
@@ -120,6 +120,7 @@ function footer() {
   <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
+      <img class="footer-logo" src="assets/icon-512.png" alt="" width="96" height="96" loading="lazy">
       <p class="footer-brand">Fundación Niños del Rey</p>
       <p>Terapias a bajo costo para niñas, niños y jóvenes. ${ORG.place}.</p>
       <p class="footer-note">Enfoque cristiano, con respeto por la identidad y las creencias de cada familia.</p>
@@ -151,7 +152,7 @@ function jsonLd() {
     '@type': 'NGO',
     name: ORG.name,
     url: SITE_URL + '/',
-    logo: SITE_URL + '/assets/logo.png',
+    logo: SITE_URL + '/assets/icon-512.png',
     email: ORG.email,
     telephone: '+' + ORG.wa,
     sameAs: [`https://www.instagram.com/${ORG.ig}/`],
@@ -178,9 +179,13 @@ function page(meta, body) {
 <meta property="og:title" content="${meta.title}">
 <meta property="og:description" content="${meta.description}">
 <meta property="og:url" content="${url}">
-<meta property="og:image" content="${SITE_URL}/assets/og-image.png">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="assets/logo.png">
+<meta property="og:image" content="${SITE_URL}/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="assets/icon-512.png" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
