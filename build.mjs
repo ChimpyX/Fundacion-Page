@@ -17,7 +17,7 @@ const ORG = {
   ig: 'fundacionninosdelrey.oficial',
   place: 'Quillota 654, Viña del Mar',
   rut: '9.904.279-2',
-  mapsUrl: 'https://maps.app.goo.gl/7M6qctsq4EsAs6bW8',
+  mapsUrl: 'https://maps.app.goo.gl/WZsdTBHicBSmSocz5',
 };
 
 const waLink = (msg) => `https://wa.me/${ORG.wa}?text=${encodeURIComponent(msg)}`;
