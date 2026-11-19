@@ -20,8 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="actividades">
@@ -49,11 +51,11 @@
   </div>
 </header>
 <main id="contenido" tabindex="-1">
-<section class="page-hero">
+<section class="page-hero" data-enter>
   <div class="container">
     <p class="eyebrow">Actividades</p>
     <h1>Lo que vivimos en comunidad</h1>
-    <p class="lead">Terapias, ferias solidarias, reuniones de familias y salidas. Cuidamos la privacidad de cada niño: solo publicamos fotos con autorización de los apoderados y sin mostrar rostros.</p>
+    <p class="lead enter-up">Terapias, ferias solidarias, reuniones de familias y salidas. Cuidamos la privacidad de cada niño: solo publicamos fotos con autorización de los apoderados y sin mostrar rostros.</p>
   </div>
 </section>
 
@@ -69,51 +71,51 @@
     </div>
     <p id="gallery-status" class="visually-hidden" role="status" aria-live="polite"></p>
     <ul class="gallery">
-      <li data-category="terapias" class="reveal"><figure>
+      <li data-category="terapias"><figure>
         <div class="photo-slot" style="--slot: var(--lila)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: manos con material de terapia, sin rostros.</small></div></div>
         <figcaption><span class="tag">Terapias</span><br>[Descripción breve de la actividad 1 y fecha]</figcaption>
       </figure></li>
-      <li data-category="terapias" class="reveal"><figure>
+      <li data-category="terapias"><figure>
         <div class="photo-slot" style="--slot: var(--lila)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: manos con material de terapia, sin rostros.</small></div></div>
         <figcaption><span class="tag">Terapias</span><br>[Descripción breve de la actividad 2 y fecha]</figcaption>
       </figure></li>
-      <li data-category="terapias" class="reveal"><figure>
+      <li data-category="terapias"><figure>
         <div class="photo-slot" style="--slot: var(--lila)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: manos con material de terapia, sin rostros.</small></div></div>
         <figcaption><span class="tag">Terapias</span><br>[Descripción breve de la actividad 3 y fecha]</figcaption>
       </figure></li>
-      <li data-category="ferias" class="reveal"><figure>
+      <li data-category="ferias"><figure>
         <div class="photo-slot" style="--slot: var(--amarillo)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: el stand, productos o voluntarios adultos.</small></div></div>
         <figcaption><span class="tag">Ferias</span><br>[Descripción breve de la actividad 1 y fecha]</figcaption>
       </figure></li>
-      <li data-category="ferias" class="reveal"><figure>
+      <li data-category="ferias"><figure>
         <div class="photo-slot" style="--slot: var(--amarillo)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: el stand, productos o voluntarios adultos.</small></div></div>
         <figcaption><span class="tag">Ferias</span><br>[Descripción breve de la actividad 2 y fecha]</figcaption>
       </figure></li>
-      <li data-category="ferias" class="reveal"><figure>
+      <li data-category="ferias"><figure>
         <div class="photo-slot" style="--slot: var(--amarillo)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: el stand, productos o voluntarios adultos.</small></div></div>
         <figcaption><span class="tag">Ferias</span><br>[Descripción breve de la actividad 3 y fecha]</figcaption>
       </figure></li>
-      <li data-category="reuniones" class="reveal"><figure>
+      <li data-category="reuniones"><figure>
         <div class="photo-slot" style="--slot: var(--celeste)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: adultos en ronda, o tomada desde atrás.</small></div></div>
         <figcaption><span class="tag">Reuniones</span><br>[Descripción breve de la actividad 1 y fecha]</figcaption>
       </figure></li>
-      <li data-category="reuniones" class="reveal"><figure>
+      <li data-category="reuniones"><figure>
         <div class="photo-slot" style="--slot: var(--celeste)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: adultos en ronda, o tomada desde atrás.</small></div></div>
         <figcaption><span class="tag">Reuniones</span><br>[Descripción breve de la actividad 2 y fecha]</figcaption>
       </figure></li>
-      <li data-category="reuniones" class="reveal"><figure>
+      <li data-category="reuniones"><figure>
         <div class="photo-slot" style="--slot: var(--celeste)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: adultos en ronda, o tomada desde atrás.</small></div></div>
         <figcaption><span class="tag">Reuniones</span><br>[Descripción breve de la actividad 3 y fecha]</figcaption>
       </figure></li>
-      <li data-category="salidas" class="reveal"><figure>
+      <li data-category="salidas"><figure>
         <div class="photo-slot" style="--slot: var(--verde)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: niños de espalda mirando el paisaje.</small></div></div>
         <figcaption><span class="tag">Salidas</span><br>[Descripción breve de la actividad 1 y fecha]</figcaption>
       </figure></li>
-      <li data-category="salidas" class="reveal"><figure>
+      <li data-category="salidas"><figure>
         <div class="photo-slot" style="--slot: var(--verde)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: niños de espalda mirando el paisaje.</small></div></div>
         <figcaption><span class="tag">Salidas</span><br>[Descripción breve de la actividad 2 y fecha]</figcaption>
       </figure></li>
-      <li data-category="salidas" class="reveal"><figure>
+      <li data-category="salidas"><figure>
         <div class="photo-slot" style="--slot: var(--verde)"><div><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 8h3l2-2.5h6L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg><span>[Foto con autorización de los apoderados]</span><small>Sugerencia: niños de espalda mirando el paisaje.</small></div></div>
         <figcaption><span class="tag">Salidas</span><br>[Descripción breve de la actividad 3 y fecha]</figcaption>
       </figure></li>
@@ -133,6 +135,7 @@
 
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>

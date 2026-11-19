@@ -117,6 +117,7 @@ function footer() {
   return `
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>
@@ -184,8 +185,10 @@ function page(meta, body) {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 ${meta.slug === 'index' ? `<script type="application/ld+json">${jsonLd()}</script>` : ''}
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="${meta.slug}">

@@ -20,8 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="trabaja-con-nosotros">
@@ -49,11 +51,11 @@
   </div>
 </header>
 <main id="contenido" tabindex="-1">
-<section class="page-hero">
+<section class="page-hero" data-enter>
   <div class="container">
     <p class="eyebrow">Trabaja con nosotros</p>
     <h1>Súmate a un equipo que cambia realidades</h1>
-    <p class="lead">Buscamos profesionales y voluntarios que quieran poner su vocación al servicio de niñas, niños y familias de Valparaíso.</p>
+    <p class="lead enter-up">Buscamos profesionales y voluntarios que quieran poner su vocación al servicio de niñas, niños y familias de Valparaíso.</p>
   </div>
 </section>
 
@@ -61,7 +63,7 @@
   <div class="container">
     <h2 id="perfiles" class="visually-hidden">Perfiles</h2>
     <div class="grid grid-2">
-      <div class="card card-tint bg-verde reveal">
+      <div class="card card-tint bg-verde">
         <span class="icon-badge bg-paper"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 13h18"/></svg></span>
         <h3>Terapeutas</h3>
         <p><strong>Convocatoria abierta: terapeutas ocupacionales.</strong> También recibimos antecedentes de otras especialidades.</p>
@@ -70,7 +72,7 @@
           <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Modalidad: <span class="todo">[jornada, honorarios, horario]</span></span></li>
         </ul>
       </div>
-      <div class="card card-tint bg-amarillo reveal">
+      <div class="card card-tint bg-amarillo">
         <span class="icon-badge bg-paper"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11"/><path d="M11 10.5V4a1.5 1.5 0 0 1 3 0v6.5"/><path d="M14 10.5V5.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7 6 6 0 0 1-5.3-3.2L3 14.4a1.5 1.5 0 0 1 2.5-1.6L8 15"/></svg></span>
         <h3>Voluntariado</h3>
         <p>Hay muchas formas de ayudar: eventos, rifas, ferias, difusión, apoyo administrativo y más.</p>
@@ -148,6 +150,7 @@
 
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>

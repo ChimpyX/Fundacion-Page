@@ -52,15 +52,118 @@
     if (link) { a.href = link; a.target = '_blank'; a.rel = 'noopener'; }
   });
 
-  /* Aparición suave al hacer scroll */
-  var reveals = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
-    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-    reveals.forEach(function (el) { io.observe(el); });
-  } else {
-    reveals.forEach(function (el) { el.classList.add('is-visible'); });
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var root = document.documentElement;
+
+  /* Entrada del hero: el titular sube palabra por palabra y luego el resto, una sola vez */
+  (function enter() {
+    var hero = document.querySelector('[data-enter]');
+    if (!hero || reduced) { root.classList.add('m-entered'); return; }
+    var h1 = hero.querySelector('h1');
+    var words = 0;
+    if (h1) {
+      var walker = document.createTreeWalker(h1, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var frag = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          var w = document.createElement('span'); w.className = 'w';
+          var inner = document.createElement('span'); inner.textContent = part;
+          inner.style.setProperty('--d', Math.min(words * 30, 240) + 'ms');
+          w.appendChild(inner); frag.appendChild(w); words++;
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+      h1.setAttribute('aria-label', h1.textContent.replace(/\s+/g, ' ').trim());
+    }
+    var after = hero.querySelectorAll('.enter-up');
+    after.forEach(function (el, i) { el.style.setProperty('--d', (380 + i * 60) + 'ms'); });
+    var art = hero.querySelector('.hero-art');
+    if (art) art.style.setProperty('--d', '200ms');
+    requestAnimationFrame(function () { requestAnimationFrame(function () { root.classList.add('m-entered'); }); });
+    setTimeout(function () { if (h1) h1.removeAttribute('aria-label'); }, 1600);
+  })();
+
+  /* Momento: la frase se ilumina palabra por palabra mientras se desliza */
+  var moments = [];
+  if (!reduced) {
+    document.querySelectorAll('[data-moment="words"]').forEach(function (el) {
+      var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var frag = document.createDocumentFragment();
+        node.textContent.split(/(\s+)/).forEach(function (part) {
+          if (!part) return;
+          if (/^\s+$/.test(part)) { frag.appendChild(document.createTextNode(part)); return; }
+          var w = document.createElement('span'); w.className = 'mw'; w.textContent = part; frag.appendChild(w);
+        });
+        node.parentNode.replaceChild(frag, node);
+      });
+      moments.push({ el: el, words: el.querySelectorAll('.mw') });
+    });
+    if (moments.length) root.classList.add('js-moment');
+  }
+  function updateMoments() {
+    var vh = window.innerHeight;
+    moments.forEach(function (m) {
+      var r = m.el.getBoundingClientRect();
+      var p = (vh * 0.9 - r.top) / (vh * 0.55 + r.height * 0.6);
+      p = Math.max(0, Math.min(1, p));
+      var lit = Math.round(p * m.words.length);
+      for (var i = 0; i < m.words.length; i++) m.words[i].classList.toggle('on', i < lit);
+    });
+  }
+  var ticking = false;
+  function onScroll() {
+    if (ticking) return; ticking = true;
+    requestAnimationFrame(function () { ticking = false; updateMoments(); });
+  }
+  if (moments.length) { window.addEventListener('scroll', onScroll, { passive: true }); window.addEventListener('resize', onScroll); updateMoments(); }
+
+  /* Deslizamiento suave: solo mouse/trackpad, nunca en táctil ni con "reducir movimiento" */
+  var lenis = null;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (CFG.smoothScroll !== false && !reduced && finePointer && typeof window.Lenis === 'function') {
+    lenis = new window.Lenis({ lerp: 0.1, wheelMultiplier: 1, smoothWheel: true, syncTouch: false });
+    var raf = function (t) { lenis.raf(t); requestAnimationFrame(raf); };
+    requestAnimationFrame(raf);
+    // El mapa y los menús con scroll propio no se secuestran
+    document.querySelectorAll('iframe, .site-nav, textarea').forEach(function (el) { el.setAttribute('data-lenis-prevent', ''); });
+  }
+
+  /* Enlaces internos (#seccion): desplazamiento suave y el foco llega al destino */
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="#"]');
+    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    var url = new URL(a.href, location.href);
+    if (url.pathname !== location.pathname || !url.hash) return;
+    var target = document.getElementById(decodeURIComponent(url.hash.slice(1)));
+    if (!target) return;
+    e.preventDefault();
+    closeMenu();
+    var header = document.querySelector('.site-header');
+    var offset = (header ? header.offsetHeight : 0) + 16;
+    if (lenis) lenis.scrollTo(target, { offset: -offset, duration: 1.1 });
+    else window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - offset, behavior: reduced ? 'auto' : 'smooth' });
+    if (!target.hasAttribute('tabindex') && !/^(A|BUTTON|INPUT|SELECT|TEXTAREA)$/.test(target.tagName)) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    history.pushState(null, '', url.hash);
+  });
+
+  /* El botón flotante de WhatsApp se esconde mientras otro botón de WhatsApp está a la vista */
+  var waFloat = document.querySelector('.wa-float');
+  var waBtns = document.querySelectorAll('main .btn-wa');
+  if (waFloat && waBtns.length && 'IntersectionObserver' in window) {
+    var visible = new Set();
+    var waIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) visible.add(en.target); else visible.delete(en.target); });
+      waFloat.classList.toggle('is-hidden', visible.size > 0);
+    });
+    waBtns.forEach(function (b) { waIO.observe(b); });
   }
 
   /* Filtro de galería */

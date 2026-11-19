@@ -20,8 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="recursos">
@@ -49,11 +51,11 @@
   </div>
 </header>
 <main id="contenido" tabindex="-1">
-<section class="page-hero">
+<section class="page-hero" data-enter>
   <div class="container">
     <p class="eyebrow">Recursos para familias</p>
     <h1>Información clara para acompañar mejor</h1>
-    <p class="lead">Guías breves y en lenguaje simple. No reemplazan una evaluación profesional: si tienes dudas sobre tu hijo o hija, escríbenos.</p>
+    <p class="lead enter-up">Guías breves y en lenguaje simple. No reemplazan una evaluación profesional: si tienes dudas sobre tu hijo o hija, escríbenos.</p>
   </div>
 </section>
 
@@ -118,9 +120,9 @@
   <div class="container">
     <div class="section-head"><p class="eyebrow">Descargas</p><h2 id="descargas">Material para imprimir</h2></div>
     <ul class="grid grid-3" role="list">
-      <li class="card reveal"><span class="icon-badge bg-lila"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Guía de autismo para familias</h3><p class="todo">[PDF por enviar]</p></li>
-      <li class="card reveal"><span class="icon-badge bg-celeste"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Guía de TDAH para familias</h3><p class="todo">[PDF por enviar]</p></li>
-      <li class="card reveal"><span class="icon-badge bg-verde"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Pictogramas de rutina diaria</h3><p class="todo">[PDF por enviar]</p></li>
+      <li class="card"><span class="icon-badge bg-lila"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Guía de autismo para familias</h3><p class="todo">[PDF por enviar]</p></li>
+      <li class="card"><span class="icon-badge bg-celeste"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Guía de TDAH para familias</h3><p class="todo">[PDF por enviar]</p></li>
+      <li class="card"><span class="icon-badge bg-verde"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg></span><h3>Pictogramas de rutina diaria</h3><p class="todo">[PDF por enviar]</p></li>
     </ul>
   </div>
 </section>
@@ -137,6 +139,7 @@
 
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>

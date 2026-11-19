@@ -34,3 +34,10 @@ Copia un bloque `<li class="news-card">` en `src/pages/noticias.html` y vuelve a
 No publicar rostros de niños. Solo fotos con autorización escrita de los apoderados, de espalda o de manos. Optimiza antes de subir: ancho máx. 1600 px, formato WebP o JPG calidad ~75.
 
 Ver la lista de contenido por enviar en [CONTENIDO-PENDIENTE.md](CONTENIDO-PENDIENTE.md).
+
+## Movimiento
+- **Deslizamiento suave** (Lenis 1.1.20, MIT, en `js/vendor/`): solo con rueda del mouse o trackpad en computador. En celulares el desplazamiento es el nativo, y se desactiva solo con "reducir movimiento". Se apaga con `smoothScroll: false` en `js/config.js`.
+- **Entrada del hero**: el titular sube palabra por palabra una sola vez al cargar.
+- **Frase que se ilumina** al deslizar (`data-moment="words"`) en Inicio, Quiénes somos y Apadrina.
+- **Hover**: botones que suben 1 px y se hunden al presionar, tarjetas con enlace que se elevan 2 px, subrayados que se dibujan.
+- Sin movimiento al deslizar fuera de esas frases (nada aparece "flotando" en cada sección).

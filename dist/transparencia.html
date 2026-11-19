@@ -20,8 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="transparencia">
@@ -49,11 +51,11 @@
   </div>
 </header>
 <main id="contenido" tabindex="-1">
-<section class="page-hero">
+<section class="page-hero" data-enter>
   <div class="container">
     <p class="eyebrow">Transparencia</p>
     <h1>Cada peso, a la vista</h1>
-    <p class="lead">Rendimos cuentas de lo que recibimos y de cómo lo usamos. Así sabes exactamente a qué contribuyes.</p>
+    <p class="lead enter-up">Rendimos cuentas de lo que recibimos y de cómo lo usamos. Así sabes exactamente a qué contribuyes.</p>
   </div>
 </section>
 
@@ -64,7 +66,7 @@
       <p>Distribución del uso de los fondos durante <span class="todo">[período, por ejemplo: año 2026]</span>.</p>
       <p class="form-note">Los porcentajes se completarán con la información de la fundación.</p>
     </div>
-    <div class="card reveal">
+    <div class="card">
       <ul class="bars">
         <li><div class="bar-label"><span>Honorarios de terapeutas</span><span>[%]</span></div><div class="bar"><span style="--w:0%; --c: var(--lila-2)"></span></div></li>
         <li><div class="bar-label"><span>Materiales de terapia</span><span>[%]</span></div><div class="bar"><span style="--w:0%; --c: var(--celeste-2)"></span></div></li>
@@ -128,6 +130,7 @@
 
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>

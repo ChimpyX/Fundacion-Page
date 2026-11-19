@@ -20,8 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&family=Nunito:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(function(){document.documentElement.classList.add('m-enter-done')},1200)</script>
 
 <script src="js/config.js" defer></script>
+<script src="js/vendor/lenis.min.js" defer></script>
 <script src="js/main.js" defer></script>
 </head>
 <body data-page="noticias">
@@ -49,11 +51,11 @@
   </div>
 </header>
 <main id="contenido" tabindex="-1">
-<section class="page-hero">
+<section class="page-hero" data-enter>
   <div class="container">
     <p class="eyebrow">Noticias y convocatorias</p>
     <h1>Lo que está pasando en la fundación</h1>
-    <p class="lead">Rifas, eventos, convocatorias y avisos importantes para las familias.</p>
+    <p class="lead enter-up">Rifas, eventos, convocatorias y avisos importantes para las familias.</p>
   </div>
 </section>
 
@@ -68,7 +70,7 @@
   <div class="container">
     <h2 id="publicaciones" class="visually-hidden">Publicaciones</h2>
     <ul class="news">
-      <li id="rifa" class="news-card reveal" style="--t: var(--amarillo)">
+      <li id="rifa" class="news-card" style="--t: var(--amarillo)">
         <div class="news-top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 8a2 2 0 0 0 0 4v4h18v-4a2 2 0 0 1 0-4V4H3z" transform="translate(0 2)"/><path d="M14 6v12" stroke-dasharray="2 2"/></svg><span class="news-kind">Rifa solidaria</span><span class="news-date">[Fecha del sorteo]</span></div>
         <div class="news-body">
           <h3>Rifa solidaria: números a $1.000</h3>
@@ -80,7 +82,7 @@
           <div class="btn-row"><a class="btn btn-wa btn-sm" href="https://wa.me/56986258318?text=Hola%2C%20quiero%20comprar%20n%C3%BAmeros%20de%20la%20rifa%20solidaria." data-donate="rifa" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.6c0 3.3 2.9 6.4 6.3 6.4l1.2-1.4-1.9-1-1 .8a5 5 0 0 1-2.6-2.6l.8-1-1-1.9z"/></svg>Comprar números</a></div>
         </div>
       </li>
-      <li id="cuidadores" class="news-card reveal" style="--t: var(--celeste)">
+      <li id="cuidadores" class="news-card" style="--t: var(--celeste)">
         <div class="news-top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="7" cy="6" r="2.5"/><circle cx="17" cy="6" r="2.5"/><circle cx="12" cy="12.5" r="2"/><path d="M3 20v-5a4 4 0 0 1 8 0M13 20v-5a4 4 0 0 1 8 0M9.5 20v-2.5a2.5 2.5 0 0 1 5 0V20"/></svg><span class="news-kind">Evento</span><span class="news-date">[Fecha]</span></div>
         <div class="news-body">
           <h3>Jornadas de encuentro de cuidadores</h3>
@@ -89,7 +91,7 @@
           <div class="btn-row"><a class="btn btn-wa btn-sm" href="https://wa.me/56986258318?text=Hola%2C%20quiero%20inscribirme%20en%20la%20jornada%20de%20encuentro%20de%20cuidadores." target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3.5 20.5l1.3-4.1A8.5 8.5 0 1 1 8 19.5z"/><path d="M9 8.6c0 3.3 2.9 6.4 6.3 6.4l1.2-1.4-1.9-1-1 .8a5 5 0 0 1-2.6-2.6l.8-1-1-1.9z"/></svg>Inscribirme</a></div>
         </div>
       </li>
-      <li class="news-card reveal" style="--t: var(--verde)">
+      <li class="news-card" style="--t: var(--verde)">
         <div class="news-top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 10v4h3l7 4V6L7 10z"/><path d="M17 9a4 4 0 0 1 0 6"/></svg><span class="news-kind">Convocatoria</span><span class="news-date">Abierta</span></div>
         <div class="news-body">
           <h3>Buscamos terapeutas ocupacionales</h3>
@@ -97,7 +99,7 @@
           <div class="btn-row"><a class="btn btn-primary btn-sm" href="trabaja-con-nosotros.html">Postular</a></div>
         </div>
       </li>
-      <li class="news-card reveal" style="--t: var(--rosado)">
+      <li class="news-card" style="--t: var(--rosado)">
         <div class="news-top"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20s-7.5-4.4-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10C19.5 15.6 12 20 12 20z"/></svg><span class="news-kind">Campaña</span><span class="news-date">Permanente</span></div>
         <div class="news-body">
           <h3>Campaña de apadrinamiento</h3>
@@ -113,6 +115,7 @@
 
 <footer class="site-footer">
   <div class="rainbow-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="container close-type"><p>Que cada niño<br>pueda <span>brillar.</span></p></div>
   <div class="container footer-grid">
     <div>
       <p class="footer-brand">Fundación Niños del Rey</p>

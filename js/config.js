@@ -9,6 +9,11 @@ window.FNR_CONFIG = {
   whatsapp: '56986258318',
   email: 'fundacionninosdelrey.valpo@gmail.com',
 
+  // Deslizamiento suave con rueda del mouse o trackpad (solo computador).
+  // En celulares el desplazamiento es siempre el nativo, y se desactiva solo
+  // si la persona tiene activado "reducir movimiento". Poner false para apagarlo.
+  smoothScroll: true,
+
   // URL de un servicio de formularios (Formspree, Getform, Netlify Forms, etc.).
   // Ej.: 'https://formspree.io/f/XXXXXXX'. Vacío = el formulario arma un mensaje de WhatsApp.
   formEndpoint: '',
