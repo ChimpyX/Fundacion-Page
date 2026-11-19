@@ -1,0 +1,10 @@
+// Configuración para Cloudflare Workers (sitio estático).
+// Cloudflare ejecuta "node build.mjs" y luego "npx wrangler deploy",
+// que publica la carpeta dist/.
+{
+  "name": "fundacion-page",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}
